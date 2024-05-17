@@ -1,0 +1,285 @@
+/*  */
+
+/* Global Styles */
+body.bodyVixios {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(circle at center, #00172D, #000C17);
+    color: #FFFFFF;
+}
+
+/* Navbar Styles */
+nav.navVixioIndex {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* padding: 0 20px; */
+    height: 80px;
+    width: 100vw;
+    background-color: #0D1B2A;
+    box-shadow: 0 1px 0 #1C2C3A;
+}
+
+ul.ulNavVixoIndexOne, ul.ulNavVixoIndexTwo, ul.ulNavVixoIndexThree {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+ul.ulNavVixoIndexOne h4 {
+    font-size: 24px;
+    color: #FFFFFF;
+    font-weight: bold;
+    margin: 0;
+}
+
+ul.ulNavVixoIndexTwo li a {
+    text-decoration: none;
+    color: #B0BEC5;
+    margin: 0 15px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+ul.ulNavVixoIndexTwo li a:hover {
+    color: #FFFFFF;
+}
+
+ul.ulNavVixoIndexThree li button {
+    background-color: #1A73E8;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+ul.ulNavVixoIndexThree li button:hover {
+    background-color: #135ABC;
+}
+
+ul.ulNavVixoIndexThree li {
+    margin-left: 15px;
+}
+
+
+/* Main Content Styles */
+main.mainVixioIndex {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.fieldVixioContentOne {
+    margin: 50px 0;
+}
+
+.logoVixioMain h1 {
+    font-size: 120px;
+    color: #17E1CE;
+}
+
+.fielTextVixioMain p {
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+.fielTextVixioMain a {
+    text-decoration: none;
+    color: #FFFFFF;
+    background-color: #005A8D;
+    padding: 10px 30px;
+    border-radius: 10px;
+}
+
+.fielTextVixioMain a p {
+    margin: 0;
+    font-size: 16px;
+}
+
+.fielTextVixioMain a:hover {
+    background-color: #17E1CE;
+}
+
+.fieldVixioContentOne > h1 {
+    font-size: 48px;
+    color: #17E1CE;
+    margin: 20px 0;
+}
+
+.fieldVixioContentOne p {
+    font-size: 16px;
+    color: #CCCCCC;
+    max-width: 800px;
+    margin: auto;
+}
+
+.fieldVixioContentThree {
+    margin: 50px 0;
+    padding: 20px 0;
+    background: radial-gradient(circle at center, #00172D, #000C17);
+}
+
+.fieldButtonsDevelops {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+}
+
+.divDevs {
+    background-color: #0D1B2A;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 14px;
+    color: #FFFFFF;
+    transition: background-color 0.3s;
+}
+
+.divDevs:hover {
+    background-color: #17E1CE;
+}
+
+/* Products Section */
+.fieldVixioContentFour {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.textContentProducts h1 {
+    font-size: 48px;
+    color: #17E1CE;
+    margin-bottom: 20px;
+}
+
+.fieldProjects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.projectsVixioIndex {
+    background-color: #0D1B2A;
+    padding: 20px;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.projectsVixioIndex:hover {
+    transform: translateY(-10px);
+}
+
+.projectsVixioIndex img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.projectsVixioIndex::before {
+    content: "Pesquisa Eleitorais";
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-size: 18px;
+    color: #FFFFFF;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.projectsVixioIndex:hover::before {
+    opacity: 1;
+}
+
+.projectsVixioIndex::after {
+    content: ">";
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 24px;
+    color: #FFFFFF;
+    background-color: #17E1CE;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.projectsVixioIndex:hover::after {
+    opacity: 1;
+}
+
+/* Clients Section */
+.fieldVixioContentFive {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.textFieldClientVixio h1 {
+    font-size: 48px;
+    color: #17E1CE;
+    margin-bottom: 20px;
+}
+
+.fieldClientsImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.subFieldClientsImg img {
+    width: 150px;
+    height: auto;
+    filter: grayscale(100%);
+    transition: filter 0.3s;
+}
+
+.subFieldClientsImg img:hover {
+    filter: none;
+}
+
+/* Footer Styles */
+footer.footerVixios {
+    background-color: #0D1B2A;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.textFooter h3 {
+    font-size: 24px;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+}
+
+ul.ulFooterTextVixio, ul.ulFooterIconsVixio {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 0 0 20px 0;
+}
+
+ul.ulFooterTextVixio li a, ul.ulFooterIconsVixio li a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.textDescriptionFooter p {
+    font-size: 14px;
+    color: #CCCCCC;
+}
+
