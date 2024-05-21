@@ -5,106 +5,279 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vixio</title>
     <link rel="stylesheet" href="style.css">
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <!-- Boostrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Animate Css -->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+
+  <!-- Aos Animate -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 </head>
 <body class="bodyVixios">
+    <div class="backgorundCirles">
+        <div class="bgCirclesOne animate__animated animate__fadeIn" style="animation-delay: 2000ms; animation-duration: 5s;"></div>
+        <div class="bgCirclesTwo  animate__animated animate__fadeIn" style="animation-delay: 3000ms; animation-duration: 5s;" ></div>
+        <div class="bgCirclesThree  animate__animated animate__fadeIn" style="animation-delay: 4000ms; animation-duration: 5s;"></div>
+        <div class="bgCirclesFour"></div>
+        <div class="bgCirclesFive"></div>
+        <div class="bgCirclesSix"></div>
+        <div class="bgCirclesSeven"></div>
+
+    </div>
+
     <nav class="navVixioIndex">
-        <ul class="ulNavVixoIndexOne">
-            <li>
-                <h4>VIXIO</h4>
-            </li>
-        </ul>
-        <ul class="ulNavVixoIndexTwo">
-            <li>
-                <a href="#">Início</a>
-            </li>
-            <li>
-                <a href="#">Sobre</a>
-            </li>
-            <li>
-                <a href="#">Contato</a>
-            </li>
-            <li>
-                <a href="#">Projetos</a>
-            </li>
-        </ul>
-        <ul class="ulNavVixoIndexThree">
-            <li>
-                <button>Login</button>
-            </li>
-        </ul>
+        <div class="contentNavVixioIndex">
+            <ul class="ulNavVixoIndexOne">
+                <li>
+                    <img src="./Arquivos/vixios branco.png" alt="" >
+                </li>
+            </ul>
+            <ul class="ulNavVixoIndexTwo">
+                <li>
+                    <a href="#">Início</a>
+                </li>
+                <li>
+                    <a href="#">Sobre</a>
+                </li>
+                <li>
+                    <a href="#">Contato</a>
+                </li>
+                <li>
+                    <a href="#">Projetos</a>
+                </li>
+            </ul>
+            <ul class="ulNavVixoIndexThree">
+                <li>
+                    <a href=""> Login </a>
+                </li>
+            </ul>
+        </div>
+        
     </nav>
     <main class="mainVixioIndex">
         <div class="fieldVixioContentOne">
-            <div class="logoVixioMain">
-                <h1>VIXIO</h1>
+            <div class="logoVixioMain animate__animated animate__fadeIn" style="animation-delay: 1000ms; animation-duration: 5s;">
+                <img src="./Arquivos/vixio2.png" alt="">
             </div>
-            <div class="fielTextVixioMain">
-                <p>Desenvolvendo Soluções Tecnológicas Para Impulsionar o Seu Negócio.</p>
+            <div class="fielTextVixioMain animate__animated animate__fadeInUp">
+                <p class="fielTextVixioMainP">Desenvolvendo Soluções Tecnológicas </br> Para Impulsionar o Seu Negócio.</p>
                 
-                <a href="#">
+                <a href="#" class="logoVixioMainTagA">
                     <p>Mais sobre</p>
                 </a>
             </div>
         </div>
 
-        <div class="fieldVixioContentOne">
+        <div class="fieldVixioContentTwo"
+        data-aos="fade-up"
+        data-aos-duration="2000">
             <h1>Quem somos?</h1>
             <p>Somos uma empresa inovadora em tecnologia, com especialização em análise de dados, desenvolvimento de sistemas e gerenciamento. Nosso objetivo é transformar complexidade em simplicidade, impulsionando o crescimento do seu negócio com soluções personalizadas e eficientes.</p>
         </div>
 
-        <div class="fieldVixioContentThree">
+        <div class="fieldVixioContentThree"
+        data-aos="fade-up"
+        data-aos-duration="2000">
+
+            <div class="textFieldVixioContentThree">
+               <h1><b>Profissionais Atuantes</b></h1>
+            </div>
             <div class="fieldButtonsDevelops">
-                <div class="divDevs">Web Designers</div>
-                <div class="divDevs">Php Develop</div>
-                <div class="divDevs">Python Develop</div>
-                <div class="divDevs">Web Designers</div>
-                <div class="divDevs">Php Develop</div>
-                <div class="divDevs">Python Develop</div>
-                <div class="divDevs">Web Designers</div>
-                <div class="divDevs">Php Develop</div>
-                <div class="divDevs">Python Develop</div>
-                <div class="divDevs">Web Designers</div>
-                <div class="divDevs">Php Develop</div>
-                <div class="divDevs">Python Develop</div>
+                <div class="divDevs" 
+                data-aos="fade-up"
+                data-aos-duration="500"
+                data-aos-delay="300">Web Designers</div>
+                <div class="divDevs"
+                data-aos="fade-up"
+                data-aos-duration="500"
+                data-aos-delay="400">Php Develop</div>
+                <div class="divDevs"
+                data-aos="fade-up"
+                data-aos-duration="500"
+                data-aos-delay="500">Python Develop</div>
+                <div class="divDevs"
+                data-aos="fade-up"
+                data-aos-duration="500"
+                data-aos-delay="600">Php Develop</div>
+
+            </div>
+            <div class="fieldButtonsDevelops">
+                <div class="divDevs"
+                data-aos="fade-up"
+                data-aos-duration="500"
+                data-aos-delay="700">Web Designers</div>
+                <div class="divDevs"
+                data-aos="fade-up"
+                data-aos-duration="500"
+                data-aos-delay="800">Php Develop</div>
+                <div class="divDevs"
+                data-aos="fade-up"
+                data-aos-duration="500"
+                data-aos-delay="900">Python Develop</div>
+            </div>
+            <div class="fieldButtonsDevelops">
+                <div class="divDevs"
+                data-aos="fade-up"
+                data-aos-duration="500"
+                data-aos-delay="1000">Web Designers</div>
+                <div class="divDevs"
+                data-aos="fade-up"
+                data-aos-duration="500"
+                data-aos-delay="1200">Php Develop</div>
+                <div class="divDevs"
+                data-aos="fade-up"
+                data-aos-duration="500"
+                data-aos-delay="1300">Python Develop</div>
+                <div class="divDevs"
+                data-aos="fade-up"
+                data-aos-duration="500"
+                data-aos-delay="1400">Web Designers</div>
+            </div>
+            <div class="fieldButtonsDevelops">
+                <div class="divDevs"
+                data-aos="fade-up"
+                data-aos-duration="500"
+                data-aos-delay="1600">Web Designers</div>
+                <div class="divDevs"
+                data-aos="fade-up"
+                data-aos-duration="500"
+                data-aos-delay="1700">Python Develop</div>
+                <div class="divDevs"
+                data-aos="fade-up"
+                data-aos-duration="500"
+                data-aos-delay="1800">Web Designers</div>
             </div>
         </div>
 
-        <div class="fieldVixioContentFour">
+        <div class="fieldVixioContentFour"
+                 data-aos="fade-up"
+                data-aos-duration="2000"
+                data-aos-delay="100">
             <div class="textContentProducts">
                 <h1>Produtos</h1>
             </div>
 
             <div class="fieldProjects">
-                <div class="projectsVixioIndex">
-                    <img src="" alt="">
+                <div class="projectsVixioIndex"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay="500">
+                    
+                    <img src="./Arquivos/Screenshot_1.png" alt="">
+                    <a href=""><lord-icon
+                        src="https://cdn.lordicon.com/vduvxizq.json"
+                        trigger="loop"
+                        delay="1700"
+                        colors="primary:#ffffff"
+                        state="hover-ternd-flat-3"
+                        style="width:35px;height:35px"
+                        class="lordiconIcon">
+                    </lord-icon></a>
+                    <div class="overlay">
+                        <h2 class="title">VISÃO BRASIL</h2>
+                    </div>
+
                 </div>
-                <div class="projectsVixioIndex">
-                    <img src="" alt="">
+                <div class="projectsVixioIndex"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay="700">
+                    <img src="./Arquivos/Screenshot_1.png" alt="">
+                    <a href=""><lord-icon
+                        src="https://cdn.lordicon.com/vduvxizq.json"
+                        trigger="loop"
+                        delay="1000"
+                        colors="primary:#ffffff"
+                        state="hover-ternd-flat-3"
+                        style="width:35px;height:35px"
+                        class="lordiconIcon">
+                    </lord-icon></a>
+                    <div class="overlay">
+                        <h2 class="title">VISÃO BRASIL</h2>
+                    </div>
                 </div>
-                <div class="projectsVixioIndex">
-                    <img src="" alt="">
+                <div class="projectsVixioIndex"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay="900">
+                    <img src="./Arquivos/Screenshot_1.png" alt="">
+                    <a href=""><lord-icon
+                        src="https://cdn.lordicon.com/vduvxizq.json"
+                        trigger="loop"
+                        delay="2000"
+                        colors="primary:#ffffff"
+                        state="hover-ternd-flat-3"
+                        style="width:35px;height:35px"
+                        class="lordiconIcon">
+                    </lord-icon></a>
+                    <div class="overlay">
+                        <h2 class="title">VISÃO BRASIL</h2>
+                    </div>
                 </div>
-                <div class="projectsVixioIndex">
-                    <img src="" alt="">
+                <div class="projectsVixioIndex"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay="1200">
+                    <img src="./Arquivos/Screenshot_1.png" alt="">
+                    <a href=""><lord-icon
+                        src="https://cdn.lordicon.com/vduvxizq.json"
+                        trigger="loop"
+                        delay="1500"
+                        colors="primary:#ffffff"
+                        state="hover-ternd-flat-3"
+                        style="width:35px;height:35px"
+                        class="lordiconIcon">
+                    </lord-icon></a>
+                    <div class="overlay">
+                        <h2 class="title">VISÃO BRASIL</h2>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div class="fieldVixioContentFive">
+        <div class="fieldVixioContentFive"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay="100">
             <div class="contentClientVixio">
                 <div class="textFieldClientVixio">
                     <h1>Clientes</h1>
                 </div>
 
                 <div class="fieldClientsImg">
-                    <div class="subFieldClientsImg">
-                        <img src="" alt="">
+                    <div class="subFieldClientsImg"
+                    data-aos="fade-up"
+                    data-aos-duration="1000"
+                    data-aos-delay="400">
+
+                        <img src="./Arquivos/iNPES 1.png" alt="">
+                        
                     </div>
-                    <div class="subFieldClientsImg">
-                        <img src="" alt="">
+                    <div class="subFieldClientsImg"
+                    data-aos="fade-up"
+                    data-aos-duration="1000"
+                    data-aos-delay="600">
+                        <img src="./Arquivos/image 6.png" alt="">
+                        
+                        
                     </div>
-                    <div class="subFieldClientsImg">
-                        <img src="" alt="">
+                    <div class="subFieldClientsImg"
+                        data-aos="fade-up"
+                        data-aos-duration="1000"
+                        data-aos-delay="800">
+                        <img src="./Arquivos/image 5.png" alt="">
+                        
                     </div>
                 </div>
             </div>
@@ -112,41 +285,50 @@
     </main>
 
     <footer class="footerVixios">
-        <div class="textFooter"> <h3>Vixios</h3></div>
+        <div class="subFooterVixios">
+            <div class="textFooter"> <h2>Vixio</h2></div>
         
-        <ul class="ulFooterTextVixio">
-            <li>
-                <a href="#">Início</a>
-            </li>
-            <li>
-                <a href="#">Sobre</a>
-            </li>
-            <li>
-                <a href="#">Contato</a>
-            </li>
-            <li>
-                <a href="#">Projetos</a>
-            </li>
-        </ul>
-
-        <ul class="ulFooterIconsVixio">
-            <li>
-                <a href="#">Facebook</a>
-            </li>
-            <li>
-                <a href="#">Instagram</a>
-            </li>
-            <li>
-                <a href="#">Github</a>
-            </li>
-            <li>
-                <a href="#">Twitter</a>
-            </li>
-        </ul>
-
-        <div class="textDescriptionFooter">
-            <p>Copyright © vixio - All rights reserved</p>
+            <ul class="ulFooterTextVixio">
+                <li>
+                    <a href="#">Início</a>
+                </li>
+                <li>
+                    <a href="#">Sobre</a>
+                </li>
+                <li>
+                    <a href="#">Contato</a>
+                </li>
+                <li>
+                    <a href="#">Projetos</a>
+                </li>
+            </ul>
+    
+            <ul class="ulFooterIconsVixio">
+                <li>
+                    <a href="#"><i class="bi bi-facebook"></i></a>
+                </li>
+                <li>
+                    <a href="#"><i class="bi bi-instagram"></i></a>
+                </li>
+                <li>
+                    <a href="#"><i class="bi bi-github"></i></a>
+                </li>
+                <li>
+                    <a href="#"><i class="bi bi-twitter-x"></i></a>
+                </li>
+            </ul>
+    
+            <div class="textDescriptionFooter">
+                <p style="font-weight: 300;">Copyright © vixio - All rights reserved</p>
+            </div>
         </div>
+        
     </footer>
 </body>
+
+<script src="https://cdn.lordicon.com/lordicon.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+  </script>
 </html>

@@ -1,285 +1,1650 @@
-/*  */
+:root {
+    /* Colors --- */ 
+    --bg-main: #0E0D15;
+    --bg-dark: #0D1B45;
+    --bg-second: #0043EF;
+    --bg-second-light: #3266e7;
+    --bg-third: #01B6AF;
+    --color-primary-font: #fff;
+    --color-second-font: #CAD8FF;
+    --color-border: #d8d8d860;
 
-/* Global Styles */
-body.bodyVixios {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background: radial-gradient(circle at center, #00172D, #000C17);
-    color: #FFFFFF;
+    /* Varied --- */ 
+    --font-base: "Roboto";
+    --font-size-subtitle: 0.95rem;
+    --weight-subtitles: 200;
 }
 
-/* Navbar Styles */
-nav.navVixioIndex {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    /* padding: 0 20px; */
-    height: 80px;
-    width: 100vw;
-    background-color: #0D1B2A;
-    box-shadow: 0 1px 0 #1C2C3A;
-}
-
-ul.ulNavVixoIndexOne, ul.ulNavVixoIndexTwo, ul.ulNavVixoIndexThree {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    margin: 0;
+* {
     padding: 0;
-}
-
-ul.ulNavVixoIndexOne h4 {
-    font-size: 24px;
-    color: #FFFFFF;
-    font-weight: bold;
     margin: 0;
+    box-sizing: border-box;
+    font-family: var(--font-base), sans-serif;
 }
 
-ul.ulNavVixoIndexTwo li a {
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    position: relative;
+}
+
+.bodyVixios {
+    background-color: var(--bg-main);
+    color: var(--color-primary-font);
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* Nav Bar START --- */ 
+.navVixioIndex {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.contentNavVixioIndex {
+    display: flex;
+    width: 90%;
+    border-bottom: 1px solid var(--color-border);
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px 0px;
+}
+
+.ulNavVixoIndexOne li img {
+    max-width: 100px;
+}
+
+.ulNavVixoIndexOne,
+.ulNavVixoIndexTwo,
+.ulNavVixoIndexThree {
+    display: flex;
+    list-style: none;
+}
+
+.ulNavVixoIndexTwo li {
+    padding: 0px 20px;
+}
+
+.ulNavVixoIndexTwo li a {
     text-decoration: none;
-    color: #B0BEC5;
-    margin: 0 15px;
-    font-size: 16px;
-    font-weight: 500;
+    color: var(--color-primary-font);
+    font-weight: var(--weight-subtitles);
+    font-size: var(--font-size-subtitle);
 }
 
-ul.ulNavVixoIndexTwo li a:hover {
-    color: #FFFFFF;
-}
-
-ul.ulNavVixoIndexThree li button {
-    background-color: #1A73E8;
-    color: #FFFFFF;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
+.ulNavVixoIndexThree li a {
+    color: var(--color-primary-font);
+    background-color: var(--bg-second);
+    font-size: var(--font-size-subtitle);
+    padding: 7px 25px;
     border-radius: 20px;
-    font-size: 16px;
-    font-weight: 500;
+    text-decoration: none;
+    transition: 0.1s ease-in;
 }
 
-ul.ulNavVixoIndexThree li button:hover {
-    background-color: #135ABC;
+.ulNavVixoIndexThree li a:hover {
+    transition: 0.1s ease-in;
+    background-color: var(--bg-second-light);
+}
+/* Nav Bar END --- */ 
+
+/* Background Circles START -- */ 
+
+.backgorundCirles {
+    display: flex;
+    position: absolute;
 }
 
-ul.ulNavVixoIndexThree li {
-    margin-left: 15px;
+.bgCirclesOne {
+    position: absolute;
+    border-radius: 50%;
+    padding: 600px;
+    display: flex;
+    left: 50px;
+    transform: translateY(-200px);
+    background: 
+            radial-gradient(circle, #0043EF70 0%, transparent 50%),
+            linear-gradient(to right, #ff7f5f00, #feb47b00);
+    z-index: -1;
 }
 
+.bgCirclesTwo {
+    position: absolute;
+    border-radius: 50%;
+    padding: 800px;
+    display: flex;
+    left: 0px;
+    transform: translateY(200px) translateX(-1000px);
+    background: 
+            radial-gradient(circle, #008fef50 0%, transparent 45%),
+            linear-gradient(to right, #ff7f5f00, #feb47b00);
+    z-index: -1;
+}
 
-/* Main Content Styles */
-main.mainVixioIndex {
-    text-align: center;
-    padding: 50px 20px;
+.bgCirclesThree {
+    position: absolute;
+    border-radius: 50%;
+    padding: 800px;
+    display: flex;
+    left: 0px;
+    transform: translateY(0px) translateX(700px);
+    overflow: hidden;
+    max-width: calc(100% - 700px);
+    background: 
+            radial-gradient(circle, #008fef50 0%, transparent 45%),
+            linear-gradient(to right, #ff7f5f00, #feb47b00);
+    z-index: -1;
+}
+
+.bgCirclesFour {
+    position: absolute;
+    border-radius: 50%;
+    padding: 800px;
+    display: flex;
+    left: 0px;
+    transform: translateY(900px) translateX(700px);
+    overflow: hidden;
+    max-width: calc(100% - 700px);
+    background: 
+            radial-gradient(circle, #008fef50 0%, transparent 45%),
+            linear-gradient(to right, #ff7f5f00, #feb47b00);
+    z-index: -1;
+}
+
+.bgCirclesFive {
+    position: absolute;
+    border-radius: 50%;
+    padding: 800px;
+    display: flex;
+    left: 0px;
+    transform: translateY(1400px) translateX(-1000px);
+    background: 
+            radial-gradient(circle, #008fef50 0%, transparent 45%),
+            linear-gradient(to right, #ff7f5f00, #feb47b00);
+    z-index: -1;
+}
+
+.bgCirclesSix {
+    position: absolute;
+    border-radius: 50%;
+    padding: 700px;
+    display: flex;
+    left: 0px;
+    transform: translateY(1800px) translateX(700px);
+    overflow: hidden;
+    max-width: calc(100% - 700px);
+    max-height: calc(100% - 100px);
+    background: 
+            radial-gradient(circle, #008fef50 0%, transparent 45%),
+            linear-gradient(to right, #ff7f5f00, #feb47b00);
+    z-index: -1;
+}
+
+/* Background Circles END -- */ 
+
+.mainVixioIndex {
+    position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 .fieldVixioContentOne {
-    margin: 50px 0;
+    position: absolute;
+    top: 7%;
+    left: 50%;
+    width: 65%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
 }
 
-.logoVixioMain h1 {
-    font-size: 120px;
-    color: #17E1CE;
+
+.logoVixioMain img{
+    margin: 0 auto;
+    transform: translateX(-150px);
+    max-width: 1100px;
 }
 
-.fielTextVixioMain p {
-    font-size: 18px;
-    margin: 20px 0;
+.fielTextVixioMain {
+    position: absolute;
+    background: linear-gradient(90deg, #0E101F, #0C1B47, #0E1531);
+    border: 4px solid var(--bg-dark);
+    width: 100%;
+    top: 54%;
+    padding: 25px 60px;
+    border-radius: 20px;
+    filter: drop-shadow(0px -15px 15px #12121270);
+
+}
+
+.fielTextVixioMainP {
+    background: linear-gradient(to left, #909bb6, var(--color-primary-font), #a3afce);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: -1px;
+    z-index: 10;
 }
 
 .fielTextVixioMain a {
-    text-decoration: none;
-    color: #FFFFFF;
-    background-color: #005A8D;
-    padding: 10px 30px;
+    padding: 10px;
     border-radius: 10px;
+    display: flex;
+    width: 25%;
+    background: linear-gradient(70deg, #b7fffd 0%, #01B6AF 10%,#0043EF 50%, #0C1B47 100%);
+    margin: 30px auto;
+    text-decoration: none;
+    filter: drop-shadow(0px 0px 50px var(--bg-second));
 }
 
 .fielTextVixioMain a p {
-    margin: 0;
-    font-size: 16px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+    color: var(--color-primary-font);
 }
 
-.fielTextVixioMain a:hover {
-    background-color: #17E1CE;
+.fieldVixioContentTwo {
+    position: relative;
+    margin-top: 500px;
 }
 
-.fieldVixioContentOne > h1 {
-    font-size: 48px;
-    color: #17E1CE;
-    margin: 20px 0;
+/* fieldVixioContentTwo START -----------  */
+.fieldVixioContentTwo {
+    text-align: center;
+    padding: 100px 250px 150px 250px;
 }
 
-.fieldVixioContentOne p {
-    font-size: 16px;
-    color: #CCCCCC;
-    max-width: 800px;
-    margin: auto;
+.fieldVixioContentTwo h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    background: linear-gradient(to left, #01B6AF, #01b6b0bb, #0043EF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 900;
+    text-transform: uppercase;
 }
+
+.fieldVixioContentTwo p {
+    font-weight: 300;
+    font-size: 1.3rem;
+    color: var(--color-second-font);
+}
+/* fieldVixioContentTwo END -----------  */
+
+/* fieldVixioContentThree START -----------  */
 
 .fieldVixioContentThree {
-    margin: 50px 0;
-    padding: 20px 0;
-    background: radial-gradient(circle at center, #00172D, #000C17);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 
 .fieldButtonsDevelops {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 10px;
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.textFieldVixioContentThree{
+    font-size: 2rem;
+    margin-bottom: 40px;
+    background: linear-gradient(to left, #01B6AF, #01b6b0bb, #0043EF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
 }
 
 .divDevs {
-    background-color: #0D1B2A;
-    padding: 10px 20px;
-    border-radius: 10px;
-    text-align: center;
-    font-size: 14px;
-    color: #FFFFFF;
-    transition: background-color 0.3s;
+    padding: 10px;
+    margin: 5px 0px;
+    background-color: #0916414b;
+    border: 2px solid #0d49979c;
+    color: var(--color-second-font);
+    border-radius: 40px;
+    font-size: 1.1rem;
+    font-weight: 300;
+    padding: 10px 35px;
+    filter: drop-shadow(0px 0px 50px #0043EF70);
 }
 
-.divDevs:hover {
-    background-color: #17E1CE;
-}
+/* fieldVixioContentThree END -----------  */
 
-/* Products Section */
+/* fieldVixioContentFour START -----------  */
+
 .fieldVixioContentFour {
     text-align: center;
-    margin: 50px 0;
+    padding: 100px 250px 150px 250px;
 }
 
 .textContentProducts h1 {
-    font-size: 48px;
-    color: #17E1CE;
-    margin-bottom: 20px;
+    font-size: 4rem;
+    margin-bottom: 100px;
+    background: linear-gradient(to left, #1840AD, #285EEC, #1840AD);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 900;
+    text-transform: uppercase;
 }
 
 .fieldProjects {
+    margin: 50px 0px 0px 0px;
+    width: 100%; 
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
     justify-content: center;
-    align-items: center;
 }
 
 .projectsVixioIndex {
-    background-color: #0D1B2A;
-    padding: 20px;
-    border-radius: 15px;
     position: relative;
+    display: flex;
+    align-items: flex-end;
+    max-width: 400px;
+    border-radius: 20px;
+    border: 4px solid #0C1B47;
+    cursor: pointer;
+    filter: drop-shadow(0px 0px 50px #1840AD80);
     overflow: hidden;
-    transition: transform 0.3s;
 }
 
-.projectsVixioIndex:hover {
-    transform: translateY(-10px);
+
+.projectsVixioIndex a {
+    color: #fff;
+    font-size: 2rem;
+    z-index: 100;
+    transform: translate(-70px, 10px);
+    padding: 10px 20px;
+    border-radius: 20px 0px 0px 0px;
+    background-color: #0C1B47;
+}
+
+.lordiconIcon {
+    transform: rotate(-30deg);
 }
 
 .projectsVixioIndex img {
     width: 100%;
-    border-radius: 10px;
+    filter: opacity(90%);
+    transition: transform 0.3s ease;
 }
 
-.projectsVixioIndex::before {
-    content: "Pesquisa Eleitorais";
+.overlay {
     position: absolute;
-    bottom: 20px;
-    left: 20px;
-    font-size: 18px;
-    color: #FFFFFF;
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 10px;
-    border-radius: 5px;
-    opacity: 0;
-    transition: opacity 0.3s;
-}
-
-.projectsVixioIndex:hover::before {
-    opacity: 1;
-}
-
-.projectsVixioIndex::after {
-    content: ">";
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    font-size: 24px;
-    color: #FFFFFF;
-    background-color: #17E1CE;
-    width: 40px;
-    height: 40px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#0c1b4700, #0c1b4790, #0C1B47);
     display: flex;
-    align-items: center;
     justify-content: center;
-    border-radius: 50%;
+    align-items: center;
     opacity: 0;
-    transition: opacity 0.3s;
+    transition: opacity 0.3s ease-in-out;
 }
 
-.projectsVixioIndex:hover::after {
+.title {
+    color: white;
+    font-size: 24px;
+    text-align: center;
+}
+
+.projectsVixioIndex:hover .overlay {
     opacity: 1;
 }
 
-/* Clients Section */
+.projectsVixioIndex:hover img {
+    transform: scale(1.1);
+}
+
+/* fieldVixioContentFour END -----------  */
+
+/* fieldVixioContentFive START -----------  */
+
 .fieldVixioContentFive {
     text-align: center;
-    margin: 50px 0;
+    padding: 100px 250px 150px 250px;
 }
 
 .textFieldClientVixio h1 {
-    font-size: 48px;
-    color: #17E1CE;
+    font-size: 4rem;
     margin-bottom: 20px;
+    background: linear-gradient(to left, #1840AD, #285EEC, #1840AD);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 900;
+    text-transform: uppercase;
 }
 
 .fieldClientsImg {
-    display: flex;
-    justify-content: center;
+    margin: 100px 0px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 70px;
     align-items: center;
-    gap: 30px;
+    justify-content: center;
 }
 
-.subFieldClientsImg img {
-    width: 150px;
-    height: auto;
-    filter: grayscale(100%);
-    transition: filter 0.3s;
+.fieldClientsImg img {
+    border-left: 1px solid var(--color-second-font);
+    border-bottom: 1px solid var(--color-second-font);
+    padding: 50px 50px;
+    height: 250px;
+    border-radius: 20px;
+    max-width: 250px;
+    filter: drop-shadow(0px 0px 50px #1840AD);
+    cursor: pointer;
+    transition: 0.2s ease-in;
 }
 
-.subFieldClientsImg img:hover {
-    filter: none;
+.fieldClientsImg img:hover {
+    border: 5px solid var(--color-second-font);
+    padding: 50px 50px;
+    height: 250px;
+    border-radius: 20px;
+    max-width: 250px;
+    transform: scale(0.98);
+    transition: 0.2s ease-in;
+
 }
 
-/* Footer Styles */
-footer.footerVixios {
-    background-color: #0D1B2A;
-    padding: 30px 20px;
-    text-align: center;
-}
+/* fieldVixioContentFive END -----------  */
 
-.textFooter h3 {
-    font-size: 24px;
-    color: #FFFFFF;
-    margin-bottom: 20px;
-}
 
-ul.ulFooterTextVixio, ul.ulFooterIconsVixio {
-    list-style: none;
-    padding: 0;
+/* footerVixios START -----------  */
+
+.footerVixios {
+    margin-top: 100px;
+    width: 100%;
     display: flex;
     justify-content: center;
-    gap: 30px;
-    margin: 0 0 20px 0;
 }
 
-ul.ulFooterTextVixio li a, ul.ulFooterIconsVixio li a {
+.subFooterVixios {
+    width: 90%;
+    justify-content: center;
+    display: flex;
+    border-top: 1px solid #ffffff50;
+    padding: 50px 0px 50px 0px;
+    flex-direction: column;
+    line-height: 80px;
+}
+
+.textFooter {
+    margin: 0 auto;
+}
+
+.ulFooterTextVixio {
+    list-style: none;
+    display: flex;
+    margin: 0 auto;
+}
+
+.ulFooterTextVixio li {
+    margin: 0 30px;
+}
+
+.ulFooterTextVixio li a { 
     text-decoration: none;
-    color: #FFFFFF;
+    color: var(--color-second-font);
+    font-weight: 300;
+    font-size: 1.1rem;
 }
 
-.textDescriptionFooter p {
-    font-size: 14px;
-    color: #CCCCCC;
+.ulFooterIconsVixio {
+    list-style: none;
+    display: flex;
+    margin: 0 auto;
 }
 
+.ulFooterIconsVixio li {
+    margin: 0 25px;
+}
+
+.ulFooterIconsVixio li a {
+    padding: 10px 15px;
+    border-radius: 50px;
+    color: var(--color-second-font);
+    background-color: var(--bg-dark);
+}
+
+.ulFooterIconsVixio li a { 
+    font-size: 2rem;
+}
+.textDescriptionFooter {
+    margin: 0 auto;
+}
+
+/* footerVixios END -----------  */
+
+@media (min-width: 1700px) and (max-width: 1999px) {
+    .bgCirclesOne {
+        padding: 800px;
+        transform: translate(20px, -300px);
+    }
+    .bgCirclesThree {
+        padding: 1000px;
+        transform: translateY(0px) translateX(1100px);
+        max-width: calc(100% - 1100px);
+    }
+    .bgCirclesFour {
+        display: none;
+    }
+    .bgCirclesSix {
+        padding: 1200px;
+        transform: translateY(1800px) translateX(1000px);
+        max-width: calc(100% - 1000px);
+    }
+    .logoVixioMain img {
+        transform: translateX(-20px);
+        max-width: 1200px;
+    }
+    .fielTextVixioMain {
+        padding: 30px 20px;
+    }
+    .fielTextVixioMainP {
+        font-size: 2.6rem;
+    }
+    .fielTextVixioMain a {
+        width: 40%;
+    }
+    .fielTextVixioMain a p {
+        font-size: 1.3rem;
+    }
+    .fieldVixioContentTwo {
+        margin-top: 600px;
+    }
+    .fieldVixioContentTwo {
+        text-align: center;
+        padding: 100px 250px 150px 250px;
+    }
+    .fieldVixioContentTwo h1 {
+        font-size: 5rem;
+    }
+    .fieldVixioContentTwo p {
+        font-size: 2rem;
+    }
+    .textFieldVixioContentThree {
+        margin-bottom: 50px;
+    }
+    .textFieldVixioContentThree h1 {
+        font-size: 5rem;
+    }
+    .divDevs {
+        font-size: 2rem;
+        padding: 20px 60px;
+        margin: 15px 0px;
+    }
+    .fieldButtonsDevelops {
+        width: 80%;
+    }
+    .projectsVixioIndex {
+        max-width: 700px;
+    }
+    .textContentProducts h1 {
+        font-size: 5rem;
+        margin: 20px 0px 50px 0px;
+    }
+    .fieldVixioContentFour {
+        text-align: center;
+        padding: 100px 400px 150px 400px;
+    }
+    .fieldVixioContentFive {
+        text-align: center;
+        padding: 0px 250px;
+    }
+    .contentClientVixio {
+        padding: 0px 100px;
+        margin: auto;
+    }
+    .fieldClientsImg {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 50px;
+    }
+    .fieldClientsImg img {
+        padding: 40px 40px;
+        height: 300px;
+        max-width: 320px;
+    }
+}
+
+
+@media (min-width: 1500px) and (max-width: 1699px) {
+    .bgCirclesOne {
+        transform: translate(100px, -200px);
+    }
+    .bgCirclesThree {
+        transform: translateY(0px) translateX(1000px);
+        max-width: calc(100% - 1000px);
+    }
+    .bgCirclesFour {
+        display: none;
+    }
+    .bgCirclesSix {
+        transform: translateY(1800px) translateX(1000px);
+        max-width: calc(100% - 1000px);
+    }
+    .logoVixioMain img {
+        transform: translateX(-55px);
+        max-width: 1000px;
+    }
+    .fielTextVixioMain {
+        padding: 30px 20px;
+    }
+    .fielTextVixioMainP {
+        font-size: 2.2rem;
+    }
+    .fielTextVixioMain a {
+        width: 40%;
+    }
+    .fielTextVixioMain a p {
+        font-size: 1.1rem;
+    }
+    .fieldVixioContentTwo {
+        margin-top: 600px;
+    }
+    .fieldVixioContentTwo {
+        text-align: center;
+        padding: 100px 250px 150px 250px;
+    }
+    .fieldVixioContentTwo h1 {
+        font-size: 5rem;
+    }
+    .fieldVixioContentTwo p {
+        font-size: 1.7rem;
+    }
+    .textFieldVixioContentThree {
+        margin-bottom: 50px;
+    }
+    .textFieldVixioContentThree h1 {
+        font-size: 5rem;
+    }
+    .divDevs {
+        font-size: 1.8rem;
+        padding: 15px 50px;
+        margin: 15px 0px;
+    }
+    .fieldButtonsDevelops {
+        width: 80%;
+    }
+    .projectsVixioIndex {
+        max-width: 900px;
+    }
+    .textContentProducts h1 {
+        font-size: 5rem;
+        margin: 20px 0px 50px 0px;
+    }
+    .fieldVixioContentFour {
+        text-align: center;
+        padding: 100px 350px 150px 350px;
+    }
+    .fieldVixioContentFive {
+        text-align: center;
+        padding: 0px;
+    }
+    .contentClientVixio {
+        padding: 0px 100px;
+        margin: auto;
+    }
+    .fieldClientsImg {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 50px;
+    }
+    .fieldClientsImg img {
+        padding: 40px 40px;
+        height: 230px;
+        max-width: 250px;
+    }
+    
+}
+
+@media (min-width: 1300px) and (max-width: 1499px) {
+    .bgCirclesOne {
+        transform: translate(0px, -150px);
+    }
+    .logoVixioMain img {
+        transform: translateX(-100px);
+        max-width: 1000px;
+    }
+    .fielTextVixioMain {
+        padding: 30px 20px;
+    }
+    .fielTextVixioMainP {
+        font-size: 2.2rem;
+    }
+    .fielTextVixioMain a {
+        width: 40%;
+    }
+    .fielTextVixioMain a p {
+        font-size: 1.1rem;
+    }
+    .fieldVixioContentTwo {
+        margin-top: 600px;
+    }
+    .fieldVixioContentTwo {
+        text-align: center;
+        padding: 100px 250px 150px 250px;
+    }
+    .fieldVixioContentTwo h1 {
+        font-size: 5rem;
+    }
+    .fieldVixioContentTwo p {
+        font-size: 1.5rem;
+    }
+    .textFieldVixioContentThree {
+        margin-bottom: 50px;
+    }
+    .textFieldVixioContentThree h1 {
+        font-size: 5rem;
+    }
+    .divDevs {
+        font-size: 1.5rem;
+        padding: 15px 50px;
+        margin: 15px 0px;
+    }
+    .fieldButtonsDevelops {
+        width: 80%;
+    }
+    .fieldVixioContentFour {
+        text-align: center;
+        padding: 100px 150px 150px 150px;
+    }
+    .projectsVixioIndex {
+        max-width: 900px;
+    }
+    .textContentProducts h1 {
+        font-size: 5rem;
+        margin: 20px 0px 50px 0px;
+    }
+    .fieldVixioContentFour {
+        text-align: center;
+        padding: 100px 300px 150px 300px;
+    }
+    .fieldVixioContentFive {
+        text-align: center;
+        padding: 0px;
+    }
+    .contentClientVixio {
+        padding: 0px 100px;
+        margin: auto;
+    }
+    .fieldClientsImg {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 50px;
+    }
+    .fieldClientsImg img {
+        padding: 40px 40px;
+        height: 230px;
+        max-width: 250px;
+    }
+}
+
+
+@media (min-width: 1100px) and (max-width: 1200px) {
+    .bgCirclesOne {
+        padding: 600px;
+        transform: translate(-100px, -200px);
+    }
+    .logoVixioMain img {
+        transform: translateX(-40px);
+        max-width: 800px;
+    }
+    .fieldVixioContentFive {
+        text-align: center;
+        padding: 0px;
+    }
+    .contentClientVixio {
+        padding: 0px 100px;
+        margin: auto;
+    }
+}
+
+
+@media (min-width: 1000px) and (max-width: 1099px) {
+    .bgCirclesOne {
+        padding: 600px;
+        transform: translate(-150px, -200px);
+    }
+    .logoVixioMain img {
+        transform: translateX(-40px);
+        max-width: 700px;
+    }
+    .divDevs {
+        font-size: 1rem;
+    }
+    .projectsVixioIndex {
+        max-width: 400px;
+    }
+    .fieldVixioContentFour {
+        text-align: center;
+        padding: 100px 150px 150px 150px;
+    }
+    .textContentProducts h1 {
+        font-size: 4rem;
+        margin-bottom: 100px;
+    }
+    .fieldVixioContentFive {
+        text-align: center;
+        padding: 0px;
+    }
+    .contentClientVixio {
+        padding: 0px 100px;
+        margin: auto;
+    }
+    .fieldClientsImg {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 50px;
+    }
+    .fieldClientsImg img {
+        padding: 40px 40px;
+        height: 200px;
+        max-width: 200px;
+    }
+
+}
+
+@media (min-width: 900px) and (max-width: 999px) {
+    .logoVixioMain img {
+        transform: translateX(-50px);
+        max-width: 650px;
+    }
+    .fieldVixioContentTwo {
+        text-align: center;
+        padding: 100px 150px 150px 150px;
+    }
+    .fieldVixioContentTwo h1 {
+        font-size: 3rem;
+    }
+    .fieldVixioContentTwo p {
+        font-size: 1.2rem;
+    }
+    .textFieldVixioContentThree h1 {
+        font-size: 3rem;
+    }
+    .divDevs {
+        font-size: 1rem;
+    }
+    .fieldVixioContentFour {
+        text-align: center;
+        padding: 100px 150px 150px 150px;
+    }
+    .projectsVixioIndex {
+        max-width: 500px;
+    }
+    .textContentProducts h1 {
+        font-size: 3rem;
+        margin: 50px 0px 100px 0px;
+    }
+    .fieldVixioContentFive {
+        text-align: center;
+        padding: 0px;
+    }
+    .contentClientVixio {
+        padding: 0px 100px;
+        margin: auto;
+    }
+    .fieldClientsImg {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 50px;
+    }
+    .fieldClientsImg img {
+        padding: 40px 40px;
+        height: 180px;
+        max-width: 180px;
+    }
+    .textFieldClientVixio h1 {
+        font-size: 3rem;
+    }
+}
+
+@media (min-width: 800px) and (max-width: 899px) {
+    .bgCirclesOne {
+        padding: 500px;
+        transform: translate(-120px, -100px);
+    }
+    .logoVixioMain img {
+        transform: translateX(-60px);
+        max-width: 600px;
+    }
+    .fielTextVixioMain {
+        padding: 20px 60px;
+    }
+    .fielTextVixioMainP {
+        font-size: 1.7rem;
+    }
+    .fielTextVixioMain a {
+        width: 50%;
+    }
+    .fielTextVixioMain a p {
+        font-size: 1.1rem;
+    }
+    .fieldVixioContentTwo {
+        text-align: center;
+        padding: 100px 150px 150px 150px;
+    }
+    .fieldVixioContentTwo h1 {
+        font-size: 3rem;
+    }
+    .fieldVixioContentTwo p {
+        font-size: 1.2rem;
+    }
+    .textFieldVixioContentThree h1 {
+        font-size: 3rem;
+    }
+    .divDevs {
+        font-size: 0.9rem;
+    }
+    .fieldVixioContentFour {
+        text-align: center;
+        padding: 100px 150px 150px 150px;
+    }
+    .projectsVixioIndex {
+        max-width: 500px;
+    }
+    .projectsVixioIndex a {
+        transform: translate(-60px, 10px);
+        padding: 10px 20px;
+    }
+    .lordiconIcon {
+        width: 30px !important;
+        height: 30px !important;
+    }
+    .textContentProducts h1 {
+        font-size: 3rem;
+        margin: 50px 0px 100px 0px;
+    }
+    .fieldVixioContentFive {
+        text-align: center;
+        padding: 0px;
+    }
+    .contentClientVixio {
+        padding: 0px 100px;
+        margin: auto;
+    }
+    .fieldClientsImg {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 50px;
+    }
+    .fieldClientsImg img {
+        padding: 40px 40px;
+        height: 180px;
+        max-width: 180px;
+    }
+    .textFieldClientVixio h1 {
+        font-size: 3rem;
+    }
+}
+
+@media (min-width: 700px) and (max-width: 799px) {
+    .bgCirclesOne {
+        padding: 450px;
+        transform: translate(-120px, -150px);
+    }
+    .fieldVixioContentOne {
+        top: 6%;
+    }
+    .logoVixioMain img {
+        transform: translateX(-50px);
+        max-width: 550px;
+    }
+    .fielTextVixioMain {
+        padding: 20px 60px;
+    }
+    .fielTextVixioMainP {
+        font-size: 1.4rem;
+    }
+    .contentNavVixioIndex {
+        padding: 20px 0px;
+    }
+    .fielTextVixioMain a {
+        width: 50%;
+    }
+    .fielTextVixioMain a p {
+        font-size: 1rem;
+    }
+    .fieldVixioContentTwo {
+        text-align: center;
+        padding: 100px 100px 150px 100px;
+    }
+    .fieldVixioContentTwo h1 {
+        font-size: 2.5rem;
+    }
+    .fieldVixioContentTwo p {
+        font-size: 1.2rem;
+    }
+    .textFieldVixioContentThree h1 {
+        font-size: 2.5rem;
+    }
+    .divDevs {
+        font-size: 0.8rem;
+    }
+    .fieldVixioContentFour {
+        text-align: center;
+        padding: 100px 150px 150px 150px;
+    }
+    .projectsVixioIndex {
+        max-width: 500px;
+    }
+    .projectsVixioIndex a {
+        transform: translate(-50px, 10px);
+        padding: 10px 10px;
+    }
+    .lordiconIcon {
+        width: 30px !important;
+        height: 30px !important;
+    }
+    .textContentProducts h1 {
+        font-size: 2.5rem;
+        margin: 20px 0px 50px 0px;
+    }
+    .fieldVixioContentFive {
+        text-align: center;
+        padding: 0px;
+    }
+    .contentClientVixio {
+        padding: 0px 100px;
+        margin: auto;
+    }
+    .fieldClientsImg {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 50px;
+    }
+    .fieldClientsImg img {
+        padding: 40px 40px;
+        height: 150px;
+        max-width: 150px;
+    }
+    .textFieldClientVixio h1 {
+        font-size: 2.5rem;
+        margin: 25px 0px;
+    }
+    .ulFooterTextVixio li {
+        margin: 0 20px;
+    }
+    .ulFooterTextVixio li a {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 699px) {
+    .bgCirclesOne {
+        padding: 450px;
+        transform: translate(-170px, -150px);
+    }
+    .ulNavVixoIndexTwo li {
+        padding: 0px 10px;
+    }
+    .ulNavVixoIndexTwo li a {
+        font-size: 0.9rem;
+    }
+    .fieldVixioContentOne {
+        top: 5%;
+    }
+    .logoVixioMain img {
+        transform: translateX(-50px);
+        max-width: 500px;
+    }
+    .fieldVixioContentTwo {
+        margin-top: 380px;
+    }
+    .contentNavVixioIndex {
+        padding: 20px 0px;
+    }
+    .fielTextVixioMain {
+        padding: 20px 60px;
+    }
+    .fielTextVixioMainP {
+        font-size: 1rem;
+    }
+    .fielTextVixioMain a {
+        width: 50%;
+    }
+    .fielTextVixioMain a p {
+        font-size: 0.7rem;
+    }
+    .fieldVixioContentTwo {
+        text-align: center;
+        padding: 100px 100px 150px 100px;
+    }
+    .fieldVixioContentTwo h1 {
+        font-size: 2.3rem;
+    }
+    .fieldVixioContentTwo p {
+        font-size: 1.1rem;
+    }
+    .textFieldVixioContentThree {
+        margin-bottom: 20px;
+    }
+    .textFieldVixioContentThree h1 {
+        font-size: 2.5rem;
+    }
+    .divDevs {
+        font-size: 0.65rem;
+    }
+    .fieldButtonsDevelops {
+        width: 90%;
+    }
+    .fieldVixioContentFour {
+        text-align: center;
+        padding: 100px 100px 150px 100px;
+    }
+    .projectsVixioIndex {
+        max-width: 500px;
+    }
+    .projectsVixioIndex a {
+        transform: translate(-42px, 10px);
+        padding: 10px 12px;
+    }
+    .lordiconIcon {
+        width: 25px !important;
+        height: 25px !important;
+    }
+    .textContentProducts h1 {
+        font-size: 2.5rem;
+        margin: 20px 0px 50px 0px;
+    }
+    .fieldVixioContentFive {
+        text-align: center;
+        padding: 0px;
+    }
+    .contentClientVixio {
+        padding: 0px 100px;
+        margin: auto;
+    }
+    .fieldClientsImg {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 50px;
+    }
+    .fieldClientsImg img {
+        padding: 30px 30px;
+        height: 150px;
+        max-width: 150px;
+    }
+    .textFieldClientVixio h1 {
+        font-size: 2.5rem;
+        margin: 25px 0px;
+    }
+    .subFooterVixios {
+        line-height: 60px;
+    }
+    .ulFooterTextVixio li {
+        margin: 0 15px;
+    }
+    .ulFooterTextVixio li a {
+        font-size: 0.95rem;
+    }
+    .ulFooterIconsVixio li {
+        margin: 0 20px;
+    }
+    .ulFooterIconsVixio li a {
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 500px) and (max-width: 599px) {
+    .bgCirclesOne {
+        padding: 400px;
+        transform: translate(-170px, -150px);
+    }
+    .ulNavVixoIndexTwo li {
+        padding: 0px 10px;
+    }
+    .ulNavVixoIndexTwo li a {
+        font-size: 0.8rem;
+    }
+    .ulNavVixoIndexThree li a {
+        padding: 5px 20px;
+        font-size: 0.9rem;
+    }
+    .fieldVixioContentOne {
+        top: 4%;
+    }
+    .contentNavVixioIndex {
+        padding: 20px 0px;
+    }
+    .logoVixioMain img {
+        transform: translateX(-20px);
+        max-width: 450px;
+    }
+    .fieldVixioContentOne {
+        width: 80%; 
+    }
+    .fielTextVixioMain {
+        padding: 20px 30px 0px 30px; 
+    }
+    .contentNavVixioIndex {
+        padding: 20px 0px;
+    }
+    .ulNavVixoIndexOne li img {
+        max-width: 60px;
+    }
+    .fielTextVixioMainP {
+        font-size: 1rem;
+    }
+    .fielTextVixioMain a {
+        width: 50%;
+    }
+    .fielTextVixioMain a p {
+        font-size: 0.7rem;
+    }
+    .fieldVixioContentTwo {
+        margin-top: 300px;
+    }
+    .fieldVixioContentTwo {
+        text-align: center;
+        padding: 100px 50px 150px 50px;
+    }
+    .fieldVixioContentTwo h1 {
+        font-size: 2rem;
+    }
+    .fieldVixioContentTwo p {
+        font-size: 1rem;
+    }
+    .textFieldVixioContentThree {
+        margin-bottom: 20px;
+    }
+    .textFieldVixioContentThree h1 {
+        font-size: 2rem;
+    }
+    .divDevs {
+        font-size: 0.65rem;
+        padding: 10px 20px;
+    }
+    .fieldButtonsDevelops {
+        width: 90%;
+    }
+    .fieldVixioContentFour {
+        text-align: center;
+        padding: 100px 50px 150px 50px;
+    }
+    .projectsVixioIndex {
+        max-width: 500px;
+    }
+    .projectsVixioIndex a {
+        transform: translate(-42px, 5px);
+        padding: 0px 12px;
+    }
+    .lordiconIcon {
+        width: 20px !important;
+        height: 20px !important;
+    }
+    .textContentProducts h1 {
+        font-size: 2.5rem;
+        margin: 20px 0px 50px 0px;
+    }
+    .fieldVixioContentFive {
+        text-align: center;
+        padding: 0px;
+    }
+    .contentClientVixio {
+        padding: 0px 100px;
+        margin: auto;
+    }
+    .fieldClientsImg {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 50px;
+    }
+    .fieldClientsImg img {
+        padding: 25px 25px;
+        height: 130px;
+        max-width: 130px;
+    }
+    .textFieldClientVixio h1 {
+        font-size: 2.5rem;
+        margin: 5px 0px 15px 0px;
+    }
+    .subFooterVixios {
+        line-height: 70px;
+    }
+    .ulFooterTextVixio li {
+        margin: 0 10px;
+    }
+    .textFooter {
+        font-size: 1.2rem;
+    }
+    .ulFooterTextVixio li a {
+        font-size: 0.85rem;
+    }
+    .ulFooterIconsVixio li {
+        margin: 0 10px;
+    }
+    .ulFooterIconsVixio li a {
+        font-size: 1.3rem;
+    }
+    .textDescriptionFooter p {
+        font-size: 0.90rem;
+    }
+}
+
+
+
+@media (min-width: 400px) and (max-width: 499px) {
+    .bgCirclesOne {
+        padding: 350px;
+        transform: translate(-200px, -100px);
+    }
+    .ulNavVixoIndexTwo li {
+        padding: 0px 7px;
+    }
+    .ulNavVixoIndexTwo li a {
+        font-size: 0.75rem;
+    }
+    .ulNavVixoIndexThree li a {
+        padding: 5px 14px;
+        font-size: 0.80rem;
+    }
+    .contentNavVixioIndex {
+        padding: 20px 0px;
+    }
+    .fieldVixioContentOne {
+        top: 4%;
+    }
+    .logoVixioMain img {
+        transform: translateX(-45px);
+        max-width: 400px;
+    }
+    .fieldVixioContentOne {
+        width: 80%; 
+    }
+    .fielTextVixioMain {
+        padding: 20px 30px 0px 30px; 
+    }
+    .ulNavVixoIndexOne li img {
+        max-width: 60px;
+    }
+    .fielTextVixioMainP {
+        font-size: 1rem;
+    }
+    .fielTextVixioMain a {
+        width: 50%;
+    }
+    .fielTextVixioMain a p {
+        font-size: 0.7rem;
+    }
+    .fieldVixioContentTwo {
+        margin-top: 300px;
+    }
+    .fieldVixioContentTwo {
+        text-align: center;
+        padding: 100px 50px 100px 50px;
+    }
+    .fieldVixioContentTwo h1 {
+        font-size: 2rem;
+    }
+    .fieldVixioContentTwo p {
+        font-size: 1rem;
+    }
+    .textFieldVixioContentThree {
+        margin-bottom: 20px;
+    }
+    .textFieldVixioContentThree h1 {
+        font-size: 1.75rem;
+    }
+    .divDevs {
+        font-size: 0.65rem;
+        padding: 10px 10px;
+    }
+    .fieldButtonsDevelops {
+        width: 90%;
+    }
+    .fieldProjects {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    .fieldVixioContentFour {
+        text-align: center;
+        padding: 100px 80px 150px 80px;
+    }
+    .projectsVixioIndex {
+        max-width: 500px;
+    }
+    .projectsVixioIndex a {
+        transform: translate(-42px, 5px);
+        padding: 5px 12px;
+    }
+    .lordiconIcon {
+        width: 25px !important;
+        height: 25px !important;
+    }
+    .textContentProducts h1 {
+        font-size: 2.2rem;
+        margin: 20px 0px 50px 0px;
+    }
+    .fieldVixioContentFive {
+        text-align: center;
+        padding: 0px;
+    }
+    .contentClientVixio {
+        padding: 0px 100px;
+        margin: auto;
+    }
+    .fieldClientsImg {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+    .fieldClientsImg img {
+        padding: 40px 40px;
+        height: 180px;
+        max-width: 200px;
+    }
+    .subFooterVixios {
+        line-height: 70px;
+    }
+    .ulFooterTextVixio li {
+        margin: 0 10px;
+    }
+    .textFooter {
+        font-size: 1.2rem;
+    }
+    .ulFooterTextVixio li a {
+        font-size: 0.85rem;
+    }
+    .ulFooterIconsVixio li {
+        margin: 0 8px;
+    }
+    .ulFooterIconsVixio li a {
+        font-size: 1.1rem;
+    }
+    .textDescriptionFooter p {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 399px) {
+    .bgCirclesOne {
+        padding: 300px;
+        transform: translate(-200px, -100px);
+    }
+    .contentNavVixioIndex {
+        padding: 20px 0px;
+    }
+    .ulNavVixoIndexTwo li {
+        padding: 0px 4px;
+    }
+    .ulNavVixoIndexTwo li a {
+        font-size: 0.55rem;
+    }
+    .ulNavVixoIndexThree li a {
+        padding: 5px 14px;
+        font-size: 0.60rem;
+    }
+    .contentNavVixioIndex {
+        padding: 20px 0px;
+    }
+    .ulNavVixoIndexOne li img {
+        max-width: 50px;
+    }
+    .fieldVixioContentOne {
+        top: 4%;
+    }
+    .logoVixioMain img {
+        transform: translateX(-35px);
+        max-width: 350px;
+    }
+    .fieldVixioContentOne {
+        width: 80%; 
+    }
+    .fielTextVixioMain {
+        padding: 20px 10px 0px 10px; 
+    }
+    .fielTextVixioMainP {
+        font-size: 1rem;
+    }
+    .fielTextVixioMain a {
+        width: 50%;
+    }
+    .fielTextVixioMain a p {
+        font-size: 0.7rem;
+    }
+    .fieldVixioContentTwo {
+        margin-top: 250px;
+    }
+    .fieldVixioContentTwo {
+        text-align: center;
+        padding: 100px 50px 100px 50px;
+    }
+    .fieldVixioContentTwo h1 {
+        font-size: 2rem;
+    }
+    .fieldVixioContentTwo p {
+        font-size: 0.9rem;
+    }
+    .textFieldVixioContentThree {
+        margin-bottom: 20px;
+    }
+    .textFieldVixioContentThree h1 {
+        font-size: 1.5rem;
+    }
+    .divDevs {
+        font-size: 0.55rem;
+        padding: 8px 8px;
+    }
+    .fieldButtonsDevelops {
+        width: 90%;
+    }
+    .fieldProjects {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    .fieldVixioContentFour {
+        text-align: center;
+        padding: 100px 50px 150px 50px;
+    }
+    .projectsVixioIndex {
+        max-width: 500px;
+    }
+    .projectsVixioIndex a {
+        transform: translate(-42px, 5px);
+        padding: 5px 12px;
+    }
+    .lordiconIcon {
+        width: 25px !important;
+        height: 25px !important;
+    }
+    .textContentProducts h1 {
+        font-size: 2rem;
+        margin: 20px 0px 50px 0px;
+    }
+    .fieldVixioContentFive {
+        text-align: center;
+        padding: 0px;
+    }
+    .contentClientVixio {
+        padding: 0px 100px;
+        margin: auto;
+    }
+    .fieldClientsImg {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+    .fieldClientsImg img {
+        padding: 30px 30px;
+        height: 160px;
+        max-width: 180px;
+    }
+    .textFieldClientVixio h1 {
+        font-size: 2rem;
+        margin: 5px 0px 10px 0px;
+    }
+    .subFooterVixios {
+        line-height: 60px;
+    }
+    .ulFooterTextVixio li {
+        margin: 0 7px;
+    }
+    .textFooter {
+        font-size: 1rem;
+    }
+    .ulFooterTextVixio li a {
+        font-size: 0.75rem;
+    }
+    .ulFooterIconsVixio li {
+        margin: 0 6px;
+    }
+    .ulFooterIconsVixio li a {
+        font-size: 1rem;
+        padding: 8px 12px;
+    }
+    .textDescriptionFooter p {
+        font-size: 0.7rem;
+    }
+}
+
+
+
+/* Imagem ---- */ 
+@media (min-width: 450px) and (max-width: 499px) {
+    .logoVixioMain img {
+        transform: translateX(-30px);
+        max-width: 400px;
+    }
+}
+
+@media (min-width: 400px) and (max-width: 459px) {
+    .logoVixioMain img {
+        transform: translateX(-50px);
+        max-width: 400px;
+    }
+}
+
+/* Imagem ---- */ 
+
+/* A barra de rolagem em si */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+/* A parte de fundo da barra de rolagem */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* A parte deslizante da barra de rolagem */
+::-webkit-scrollbar-thumb {
+    background: var(--bg-third);
+    border-radius: 6px;
+}
+
+/* A parte deslizante da barra de rolagem quando está sendo ativa (pressionada) */
+::-webkit-scrollbar-thumb:active {
+    background: var(--bg-third);
+}
+
+/* A parte deslizante da barra de rolagem quando está sendo pairada */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--bg-third);
+}
